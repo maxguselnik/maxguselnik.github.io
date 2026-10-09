@@ -8,10 +8,13 @@
   <meta property="og:title" content="MCU · Хронология фильмов Marvel" />
   <meta property="og:description" content="38 фильмов, две последовательности просмотра, важные сериалы и твой прогресс." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://maxguselnik.github.io/marvel/" />
+  <link rel="canonical" href="https://maxguselnik.github.io/marvel/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <title>MCU — хронология фильмов Marvel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%224%22%20fill%3D%22%23ed1d24%22/%3E%3Ctext%20x%3D%2216%22%20y%3D%2225%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22Arial%22%20font-weight%3D%22900%22%20font-size%3D%2225%22%3EM%3C/text%3E%3C/svg%3E" />
+<title>MCU — хронология фильмов Marvel</title>
 <style>
 :root{color-scheme:dark;--bg:#08090e;--panel:#11131b;--panel-2:#161923;--border:#292c39;--text:#f5f5f7;--muted:#999cab;--faint:#666b7c;--red:#ec303c;--red2:#ff565e;--radius:20px;--font:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}a{color:inherit}::selection{background:#ff46545c}
@@ -29,6 +32,64 @@ body:before{content:"";position:fixed;pointer-events:none;inset:0;background:rad
 @media(max-width:740px){.wrap{padding-inline:16px}.nav{height:62px}.brand-sub{font-size:9px}.nav-quiet{display:none}.nav .btn{padding:10px 12px}.nav .btn-label{display:none}.hero{margin-top:17px;min-height:325px;border-radius:21px}.hero-inner{padding:37px 22px;width:100%}.hero h1{font-size:clamp(40px,10.3vw,59px);max-width:460px}.hero p{max-width:300px;font-size:12px;line-height:1.65}.hero-mark{font-size:150px;right:-8%;top:40%;opacity:.58}.hero .credit{bottom:11px;right:16px;font-size:8px}.hero-tags{margin-top:25px;gap:10px}.hero-tags span{font-size:10px}.layout{display:flex;flex-direction:column;margin-top:31px;gap:25px}.aside{display:contents}.aside .panel:nth-child(2){display:none}.aside .panel:first-child{position:relative;display:flex;align-items:center;gap:15px;padding:16px;width:100%;order:0}.aside .panel:first-child .panel-title,.aside .panel:first-child .aside-hint,.aside .panel:first-child .rule{display:none}.ring-wrap{margin:0;flex:1}.continue{width:auto;flex-shrink:0;padding:12px}.content{width:100%;order:1}.section-head{align-items:center;margin-bottom:16px}.section-head h2{font-size:26px}.counter-pill{font-size:11px}.controls{padding:11px;gap:10px;margin-bottom:25px}.control-first{gap:10px}.segmented{width:100%}.segmented button{flex:1}.control-first .search{min-width:100%}.control-second{gap:13px}.filter-stat{width:100%;margin-left:0}.chapter{margin-bottom:30px}}
 @media(max-width:410px){.brand{gap:8px}.brand-sub{font-size:8px}.marvel{font-size:18px}.hero h1{font-size:42px}.movie-card{grid-template-columns:62px minmax(0,1fr) 28px;gap:11px;padding:9px}.cover{width:62px;height:87px}.movie-title{font-size:13.5px}.movie-desc{font-size:10.5px;margin:4px 0 7px}.movie-details{font-size:9px;gap:6px}.tick{width:28px;height:28px}.cover-emblem{font-size:33px}.progress-nums{font-size:21px}.continue{font-size:11px;padding:10px}.panel{border-radius:14px}.hero .credit{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Marvel cinematic edition */
+:root{--bg:#090909;--panel:#141414;--panel-2:#1a1a1a;--border:#303030;--text:#fafafa;--muted:#ababab;--red:#ed1d24;--red2:#ff4b50}
+body{background:radial-gradient(ellipse at 0 0,#351013 0,transparent 30%),#090909}
+.wrap{max-width:1440px;padding-inline:40px}
+.topbar{background:#0b0b0bf2;border-bottom:3px solid var(--red)}.nav{height:78px}
+.marvel{font:700 35px/.98 'Oswald','Arial Narrow',sans-serif;letter-spacing:-1.7px;padding:5px 9px 7px;background:var(--red)}
+.brand-sub{font-size:12px;letter-spacing:.12em;color:#e2e2e2}.nav-quiet{font-size:13px;color:#a9a9a9}.btn{border-radius:4px;background:#1a1a1a;font-size:14px}.btn:hover{background:#292929;border-color:#777}.btn-red{background:var(--red);border-color:var(--red)}
+.hero{margin-top:24px;min-height:300px;border:1px solid #3d2424;border-radius:6px;background:#161012 url('assets/hero.jpg') center 35%/cover no-repeat}
+.hero:before{background:linear-gradient(90deg,#090909fa 0%,#090909d9 34%,#09090940 70%,#09090930),linear-gradient(0deg,#090909c9,transparent 70%)}
+.hero:after{inset:auto 0 0;width:auto;height:4px;transform:none;border:0;border-radius:0;background:linear-gradient(90deg,var(--red),var(--red) 25%,transparent 75%);box-shadow:none}
+.hero-inner{padding:32px 40px;width:76%}.eyebrow{font-size:12px;color:#ff666a;letter-spacing:.22em}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(36px,4.2vw,61px);line-height:1.1;letter-spacing:-.015em;margin:15px 0 16px;font-weight:700}.hero h1 span{color:#ff3038;margin-top:4px}
+.hero p{font-size:15px;line-height:1.7;color:#d0d0d0;max-width:500px}.hero-tags{margin-top:18px;gap:20px}.hero-tags span{font-size:13px;color:#e0e0e0}.hero-tags b{border-radius:2px;background:#ed1d2426;color:#fff;font-size:14px}.hero .credit{font-size:12px;color:#ddd;letter-spacing:.06em}
+.layout{grid-template-columns:246px minmax(0,1fr);gap:30px;margin-top:32px}.panel{border-radius:5px;padding:22px;background:linear-gradient(135deg,#191919,#121212);border-color:#303030}.panel-title{font-size:12px;letter-spacing:.12em;color:#d5d5d5}.panel:first-child{border-top:3px solid var(--red)}
+.progress-ring{background:conic-gradient(var(--red) var(--deg),#333 var(--deg))}.progress-ring:before{background:#161616}.progress-nums{font-size:27px}.progress-copy,.aside-hint{font-size:13px;color:#aaa}.aside-nav button{font-size:14px;border-radius:3px;padding:11px 8px;color:#b5b5b5}.aside-nav button:hover{color:#fff;background:#ed1d241a}.aside-nav span:last-child{font-size:12px;color:#aaa}
+.section-kicker{font-size:12px;color:#ff4b50}.section-head h2{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:0;font-size:34px;font-weight:600}.section-head p{font-size:14px;color:#aaa}.counter-pill{font-size:13px;border-radius:3px;background:#1c1c1c;border-color:#333;white-space:nowrap}
+.controls{background:#151515;border-color:#303030;border-radius:5px;padding:14px;margin-bottom:28px}.segmented{background:#080808;border-color:#333;border-radius:4px}.segmented button{font-size:14px;border-radius:2px;padding:11px 15px}.segmented button.active{background:var(--red);color:#fff}.search input{background:#0c0c0c;border-color:#333;border-radius:3px;font-size:14px}.search input:focus{border-color:var(--red)}.control-second{border-color:#303030}.switch-item{font-size:14px;color:#ccc}.filter-stat{font-size:12px;color:#aaa}
+.chapter-heading{gap:12px;margin-bottom:18px}.chapter-num{color:var(--red2);font-size:14px}.chapter-heading h3{font-family:'Oswald',sans-serif;font-size:23px;font-weight:500;letter-spacing:0;text-transform:uppercase}.chapter-line{background:linear-gradient(90deg,#444,transparent)}.chapter-count{font-size:12px;color:#999}.chapter{margin-bottom:36px}
+.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.movie-card{display:flex;flex-direction:column;gap:0;align-items:stretch;border-radius:5px;padding:0;overflow:hidden;background:#161616;border-color:#303030;min-width:0;min-height:0;box-shadow:0 8px 26px #0002;transition:transform .2s,border-color .2s,box-shadow .2s}
+.movie-card:hover{background:#191919;transform:translateY(-4px);border-color:#ed1d24;box-shadow:0 12px 32px #0008}.movie-card.watched{opacity:.72}.movie-card.watched .poster-image{filter:saturate(.45)}
+.cover{width:100%;height:auto;aspect-ratio:2/3;border:0;border-radius:0;display:block;background:#242424;overflow:hidden;flex-shrink:0;isolation:isolate}.cover:before,.cover:after{display:none}.poster-image{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}.movie-card:hover .poster-image{transform:scale(1.035)}
+.cover-number{position:absolute;top:12px;left:12px;display:grid;place-items:center;min-width:34px;height:30px;padding:0 6px;background:#090909dc;border-left:3px solid var(--red);color:#fff;font:700 14px 'Space Grotesk',sans-serif;box-shadow:0 2px 12px #0005}.cover-studio{position:absolute;right:12px;bottom:12px;background:var(--red);color:#fff;font:700 16px/1 'Oswald',sans-serif;letter-spacing:-.7px;padding:4px 5px}
+.movie-info{padding:17px 16px 12px;flex:1}.movie-meta-top{gap:7px;margin-bottom:10px}.movie-num{font-size:12px;color:#aaa}.series-tag,.alt-tag{font-size:12px;border-radius:2px;padding:4px 6px;background:#243249;color:#c0d7ff}.alt-tag{background:#4b1f22;color:#ffbabc}.movie-title{font-size:16px;font-weight:800;letter-spacing:-.015em;line-height:1.45}.movie-desc{font-size:13px;line-height:1.6;color:#aaa;margin:9px 0 13px}.movie-details{font-size:12px;gap:6px 12px;color:#9d9d9d}.movie-details b{color:#ddd}.dot{background:#777}
+.tick{align-self:stretch;flex-shrink:0;width:auto;height:42px;margin:0 16px 16px;border:1px solid #444;border-radius:3px;display:flex;align-items:center;justify-content:center;gap:8px;background:#202020;color:#ccc;font-size:13px;font-weight:700}.tick svg{width:17px;height:17px}.tick:hover{border-color:var(--red);background:#3b1517;color:#fff}.tick[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.note-box{border-radius:5px;background:#171717;border-color:#393939;border-left:3px solid var(--red);font-size:14px}.note-box p{font-size:14px;line-height:1.8;color:#b5b5b5}.footer{font-size:13px;color:#aaa;border-color:#333}.footer small{font-size:12px;line-height:1.7}.toast{border-radius:4px;background:#222;border-color:var(--red)}
+button:focus-visible,a:focus-visible{outline:2px solid #ff5b60;outline-offset:4px}button:disabled{cursor:default;opacity:.6}
+@media(min-width:1600px){.hero{min-height:320px}}
+@media(max-width:1180px){.wrap{padding-inline:28px}.layout{grid-template-columns:220px minmax(0,1fr);gap:24px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-inner{width:80%}.panel{padding:18px}.chapter-count{max-width:140px;text-align:right}.control-first{gap:10px}.segmented button{padding:10px 12px}}
+@media(max-width:740px){.wrap{padding-inline:16px}.nav{height:68px}.marvel{font-size:29px}.brand-sub{font-size:10px;letter-spacing:.09em}.nav .btn{padding:11px}.hero{margin-top:16px;min-height:270px;border-radius:4px;background-position:62% center}.hero:before{background:linear-gradient(90deg,#090909ed,#09090997),linear-gradient(0deg,#090909c9,transparent)}.hero-inner{padding:26px 22px;width:100%}.hero h1{font-size:clamp(30px,6.9vw,46px);letter-spacing:0;line-height:1.16}.hero p{font-size:14px;max-width:420px}.hero-tags{gap:12px;margin-top:16px}.hero-tags span{font-size:12px}.hero .credit{display:none}.layout{display:flex;flex-direction:column;gap:26px;margin-top:24px}.aside .panel:first-child{padding:16px;border-radius:4px;gap:12px}.progress-nums{font-size:24px}.progress-copy{font-size:12px}.continue{font-size:13px;padding:12px}.content{width:100%}.cards{gap:12px}.section-head h2{font-size:28px}.section-head p{font-size:13px}.section-head{gap:12px}.counter-pill{font-size:12px}.controls{padding:12px}.chapter-heading{flex-wrap:wrap;gap:9px}.chapter-heading h3{font-size:21px}.chapter-count{font-size:12px;max-width:none}.chapter-line{min-width:10px}.movie-info{padding:13px 12px 10px}.movie-title{font-size:14px;line-height:1.5}.movie-meta-top{gap:5px}.movie-desc{font-size:13px}.movie-num{font-size:12px}.tick{margin:0 12px 12px;font-size:12px}.series-tag,.alt-tag{font-size:12px}.cover-number{top:8px;left:8px;min-width:28px;height:27px;font-size:12px}.cover-studio{right:8px;bottom:8px;font-size:14px}.switch-item{font-size:13px}.section-kicker{font-size:12px}.footer{gap:18px;line-height:1.7}}
+@media(max-width:410px){.brand{gap:9px}.brand-sub{font-size:9px}.marvel{font-size:26px}.hero-inner{padding:24px 17px}.hero h1{font-size:30px}.hero-tags{gap:9px}.hero-tags span{font-size:12px;gap:5px}.hero-tags b{font-size:12px}.section-head{flex-wrap:wrap}.counter-pill{padding:8px}.chapter-count{width:100%;text-align:left;padding-left:29px}.movie-card{display:flex;gap:0;padding:0}.cover{width:100%;height:auto}.movie-info{padding:12px 10px 10px}.movie-details{font-size:12px;display:grid;gap:5px}.movie-desc{font-size:12px}.tick{margin:0 10px 10px;height:44px;font-size:12px}.tick svg{width:14px}.progress-nums{font-size:22px}.continue{font-size:13px}.ring-wrap{gap:10px}}
+@media(max-width:340px){.ring-wrap{min-width:0}.ring-wrap>div:last-child{min-width:0}.progress-copy{font-size:11px}.continue{font-size:12px;gap:6px}.cards{grid-template-columns:minmax(0,1fr)}.hero-tags{gap:7px}.brand-sub{display:none}.progress-ring{width:58px;height:58px}.progress-ring:before{width:46px;height:46px}.ring-value{font-size:16px}.continue{padding:10px}.hero h1{font-size:27px}}
+
+
+/* Motion: small movements, with no animation loop while the page is idle. */
+@property --deg{syntax:'<angle>';initial-value:0deg;inherits:false}
+:root{--ease-out:cubic-bezier(.22,1,.36,1);--ease-soft:cubic-bezier(.2,.7,.3,1)}
+.progress-ring{transition:--deg .7s var(--ease-out)}
+.btn,.tick,.segmented button,.aside-nav button{transition:background-color .22s ease,border-color .22s ease,color .22s ease,transform .28s var(--ease-out),box-shadow .28s ease}
+.btn:active,.tick:active{transform:scale(.96)}
+.track{transition:background-color .28s ease;flex-shrink:0}.track:after{transition:left .3s var(--ease-out),background-color .2s ease}
+.movie-card{transition:opacity .35s ease,border-color .3s ease,box-shadow .35s ease,background-color .3s ease,transform .45s var(--ease-out)}
+.poster-image{transition:opacity .5s ease,transform .7s var(--ease-out),filter .4s ease}
+.movie-card.watched{opacity:.76}.movie-card.watched .poster-image{filter:saturate(.5)}
+.hero-inner{animation:hero-arrive .8s var(--ease-out) both}.hero h1 span{animation:title-arrive .9s .08s var(--ease-out) both}.hero-tags{animation:hero-arrive .8s .15s var(--ease-out) both}
+@keyframes hero-arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes title-arrive{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
+.chapter-heading{scroll-margin-top:105px}.aside-nav button.is-current{background:#ed1d241b;color:#fff;box-shadow:inset 3px 0 var(--red)}
+.movie-card.is-next{border-color:var(--red);box-shadow:0 0 0 2px #ed1d2433,0 12px 32px #0006}
+.movie-card.was-updated .tick svg{animation:check-arrive .38s var(--ease-out)}
+@keyframes check-arrive{from{transform:scale(.5) rotate(-25deg);opacity:.4}to{transform:scale(1) rotate(0);opacity:1}}
+.toast{color:#fff;transition:opacity .3s ease,transform .4s var(--ease-out)}
+.search input{transition:border-color .25s ease,box-shadow .25s ease}.search input:focus{box-shadow:0 0 0 3px #ed1d2418}
+@media(hover:hover) and (pointer:fine){.movie-card:hover{transform:translateY(-6px);box-shadow:0 18px 35px #0007}.movie-card:hover .poster-image{transform:scale(1.045)}.btn-red:hover{box-shadow:0 5px 20px #ed1d2438}.aside-nav button:hover{transform:translateX(3px)}}
+@media(hover:none){.movie-card:hover{transform:none}.movie-card:hover .poster-image{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -37,7 +98,7 @@ body:before{content:"";position:fixed;pointer-events:none;inset:0;background:rad
   <div class="nav-right"><span class="nav-quiet">Сохраняется на устройстве</span><button class="btn" id="share" type="button" aria-label="Поделиться сайтом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V3m0 0 4.5 4.5M12 3 7.5 7.5"/><path d="M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/></svg><span class="btn-label">Поделиться</span></button></div>
 </div></header>
 <main id="top" class="wrap">
-  <section class="hero" aria-labelledby="hero-title"><div class="hero-mark" aria-hidden="true">M</div><div class="hero-inner"><div class="eyebrow">ТВОЙ ПУТЬ ПО MCU</div><h1 id="hero-title">Вся вселенная.<span>По порядку.</span></h1><p>От первых героев до мультивселенной. Полная хронология фильмов Marvel, важные сериалы и твой личный список просмотра — в одном месте.</p><div class="hero-tags"><span><b>38</b> фильмов</span><span><b>6</b> фаз</span><span><b>2</b> порядка просмотра</span></div></div><span class="credit">НЕОФИЦИАЛЬНЫЙ ГИД ФАНАТА</span></section>
+  <section class="hero" aria-labelledby="hero-title"><div class="hero-inner"><div class="eyebrow">ТВОЙ ПУТЬ ПО MCU</div><h1 id="hero-title">ВСЕЛЕННАЯ MARVEL.<span>ТВОЯ ХРОНОЛОГИЯ.</span></h1><p>От «Первого мстителя» до мультивселенной. Выбери порядок просмотра и собери свою историю MCU.</p><div class="hero-tags"><span><b>38</b> фильмов</span><span><b>6</b> фаз</span><span><b>2</b> порядка просмотра</span></div></div><span class="credit">НЕОФИЦИАЛЬНЫЙ ГИД ФАНАТА</span></section>
   <div class="layout">
   <aside class="aside" aria-label="Прогресс и навигация">
    <section class="panel"><div class="panel-title">ТВОЙ ПРОГРЕСС</div><div class="ring-wrap"><div class="progress-ring" id="progress-ring"><span class="ring-value" id="ring-percent">0%</span></div><div><div class="progress-nums" id="progress-text">0 / 38</div><div class="progress-copy">фильмов просмотрено</div></div></div><div class="rule"></div><button id="continue" class="btn btn-red continue" type="button">▶ <span id="continue-title">Продолжить</span></button><p class="aside-hint">Отметки сохраняются только в этом браузере. При переходе по ссылке у другого человека будет собственный прогресс.</p></section>
@@ -76,16 +137,84 @@ function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 function sortItems(a,b){if(state.order==='release')return a.date.localeCompare(b.date)||a.title.localeCompare(b.title);return a.chron-b.chron}
 function chapterFor(m){if(state.order==='release')return PHASES.find(p=>m.release>=p.min&&m.release<=p.max&&(!p.except||!p.except.includes(m.id))&&(!p.only||p.only.includes(m.id)))||PHASES[5];return CHAPTERS.find(p=>m.chron>=p.min&&m.chron<=p.max)||CHAPTERS[CHAPTERS.length-1]}
 function filtered(){return MOVIES.filter(m=>(!m.series||state.series)&&(!state.unwatched||!state.watched.has(m.id))&&(!state.query|| (m.title+' '+m.description+' '+m.event).toLocaleLowerCase('ru').includes(state.query))).sort(sortItems)}
-function card(m,num){const done=state.watched.has(m.id),isAlt=m.alt&&state.order==='chron';return `<article class="movie-card ${done?'watched':''}" data-genre="${m.genre}" id="item-${m.id}"><div class="cover" aria-hidden="true"><span class="cover-emblem">${esc(m.emblem)}</span><span class="cover-small">MARVEL ${m.series?'SERIES':'STUDIOS'}</span></div><div class="movie-info"><div class="movie-meta-top"><span class="movie-num">${String(num).padStart(2,'0')} <i class="dot"></i> ${m.series?'СЕРИАЛ':'ФИЛЬМ'}</span>${m.series?'<span class="series-tag">Для контекста</span>':''}${isAlt?'<span class="alt-tag">Другая вселенная</span>':''}</div><h4 class="movie-title">${esc(m.title)}</h4><p class="movie-desc">${esc(m.description)}</p><div class="movie-details"><span>События: <b>${esc(m.event)}</b></span><span>Выход: <b>${m.release}</b></span></div></div><button class="tick" type="button" data-check="${m.id}" aria-label="${done?'Убрать отметку':'Отметить просмотренным'}: ${esc(m.title)}" aria-pressed="${done}">${done?ICON_CHECK:ICON_PLUS}</button></article>`}
-function updateProgress(){const n=films.filter(f=>state.watched.has(f.id)).length;const pct=Math.round(n/films.length*100);$('progress-ring').style.setProperty('--deg',pct*3.6+'deg');$('ring-percent').textContent=pct+'%';$('progress-text').textContent=n+' / '+films.length;const next=films.slice().sort(sortItems).find(f=>!state.watched.has(f.id));$('continue-title').textContent=next?'Продолжить':'Всё просмотрено';$('continue').disabled=!next;}
-function render(){const items=filtered(), chapters=state.order==='release'?PHASES:CHAPTERS;
+function card(m,num){const done=state.watched.has(m.id),isAlt=m.alt&&state.order==='chron';return `<article class="movie-card ${done?'watched':''}" data-genre="${m.genre}" id="item-${m.id}"><div class="cover"><img class="poster-image" src="assets/${m.id}.jpg" alt="Постер: ${esc(m.title)}" width="342" height="513" loading="lazy" decoding="async" /><span class="cover-number" aria-hidden="true">${String(num).padStart(2,'0')}</span><span class="cover-studio" aria-hidden="true">MARVEL</span></div><div class="movie-info"><div class="movie-meta-top"><span class="movie-num">${String(num).padStart(2,'0')} <i class="dot"></i> ${m.series?'СЕРИАЛ':'ФИЛЬМ'}</span>${m.series?'<span class="series-tag">Для контекста</span>':''}${isAlt?'<span class="alt-tag">Другая вселенная</span>':''}</div><h4 class="movie-title">${esc(m.title)}</h4><p class="movie-desc">${esc(m.description)}</p><div class="movie-details"><span>События: <b>${esc(m.event)}</b></span><span>Выход: <b>${m.release}</b></span></div></div><button class="tick" type="button" data-check="${m.id}" aria-label="${done?'Убрать отметку':'Отметить просмотренным'}: ${esc(m.title)}" aria-pressed="${done}">${done?ICON_CHECK:ICON_PLUS}<span>${done?'Просмотрено':'Отметить просмотр'}</span></button></article>`}
+function updateProgress(){const n=films.filter(f=>state.watched.has(f.id)).length;const pct=Math.round(n/films.length*100);$('progress-ring').style.setProperty('--deg',pct*3.6+'deg');animatePercent(pct);$('progress-text').textContent=n+' / '+films.length;const next=films.slice().sort(sortItems).find(f=>!state.watched.has(f.id));$('continue-title').textContent=next?'Продолжить':'Всё просмотрено';$('continue').disabled=!next;}
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+const cardCache=new Map();
+const revealedCards=new WeakSet();
+let listAnimation,percentFrame=0;
+function animatePercent(target){
+ cancelAnimationFrame(percentFrame);
+ const el=$('ring-percent'),start=parseInt(el.textContent,10)||0;
+ if(motionPreference.matches||start===target){el.textContent=target+'%';return}
+ const begin=performance.now();
+ function step(now){const t=Math.min((now-begin)/550,1);el.textContent=Math.round(start+(target-start)*(1-Math.pow(1-t,3)))+'%';if(t<1)percentFrame=requestAnimationFrame(step)}
+ percentFrame=requestAnimationFrame(step);
+}
+function animateArrival(el,delay=0){
+ if(motionPreference.matches||revealedCards.has(el))return;
+ revealedCards.add(el);
+ el.animate([{opacity:0,transform:'translateY(20px)'},{opacity:el.classList.contains('watched')?.76:1,transform:'translateY(0)'}],{duration:520,delay,easing:'cubic-bezier(.22,1,.36,1)'});
+}
+const revealObserver=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{
+ let delay=0;for(const entry of entries){if(entry.isIntersecting){animateArrival(entry.target,Math.min(delay,160));delay+=45;revealObserver.unobserve(entry.target)}}
+},{threshold:.08}):null;
+function watchCard(el){if(revealedCards.has(el))return;if(revealObserver)revealObserver.observe(el);else animateArrival(el)}
+function syncCard(el,m,num){
+ const done=state.watched.has(m.id),button=el.querySelector('.tick');
+ el.classList.toggle('watched',done);
+ el.querySelector('.cover-number').textContent=String(num).padStart(2,'0');
+ el.querySelector('.movie-meta-top').innerHTML=`<span class="movie-num">${String(num).padStart(2,'0')} <i class="dot"></i> ${m.series?'СЕРИАЛ':'ФИЛЬМ'}</span>${m.series?'<span class="series-tag">Для контекста</span>':''}${m.alt&&state.order==='chron'?'<span class="alt-tag">Другая вселенная</span>':''}`;
+ if(button.getAttribute('aria-pressed')!==String(done)){
+  button.setAttribute('aria-pressed',String(done));button.setAttribute('aria-label',`${done?'Убрать отметку':'Отметить просмотренным'}: ${m.title}`);
+  button.innerHTML=(done?ICON_CHECK:ICON_PLUS)+`<span>${done?'Просмотрено':'Отметить просмотр'}</span>`;
+ }
+ return el;
+}
+function getCard(m,num){
+ let el=cardCache.get(m.id);
+ if(!el){const template=document.createElement('template');template.innerHTML=card(m,num);el=template.content.firstElementChild;cardCache.set(m.id,el)}
+ return syncCard(el,m,num);
+}
+function render({animate=true}={}){const items=filtered(),chapters=state.order==='release'?PHASES:CHAPTERS;
+ const active=document.activeElement,focusedMovie=active?.dataset?.check,focusedSection=active?.dataset?.section;
  $('btn-chron').classList.toggle('active',state.order==='chron');$('btn-release').classList.toggle('active',state.order==='release');$('btn-chron').setAttribute('aria-pressed',state.order==='chron');$('btn-release').setAttribute('aria-pressed',state.order==='release');$('series-toggle').checked=state.series;$('unwatched-toggle').checked=state.unwatched;
  $('list-title').textContent=state.order==='chron'?'Хронология фильмов':'Порядок выхода';$('order-desc').textContent=state.order==='chron'?'По времени основных событий внутри киновселенной':'По датам кинопремьер — рекомендуется для первого просмотра';$('total-pill').textContent=films.length+' фильмов';$('filter-stat').textContent='Показано: '+items.length+' из '+(state.series?MOVIES.length:films.length);
- let html='',nav='',index=0;
- for(const [ci,ch] of chapters.entries()){const group=items.filter(m=>chapterFor(m).id===ch.id);if(!group.length)continue;nav+=`<button type="button" data-section="chapter-${ch.id}"><span>${esc(ch.title)}</span><span>${group.length}</span></button>`;html+=`<section class="chapter" id="chapter-${ch.id}"><div class="chapter-heading"><span class="chapter-num">${String(ci+1).padStart(2,'0')}</span><h3>${esc(ch.title)}</h3><div class="chapter-line"></div><span class="chapter-count">${esc(ch.subtitle)}</span></div><div class="cards">`;for(const m of group)html+=card(m,++index);html+='</div></section>'}
- $('movie-list').innerHTML=html||'<div class="empty"><b>Ничего не найдено</b>Измени фильтры или запрос поиска.</div>';
- $('aside-nav').innerHTML=nav;
+ const fragment=document.createDocumentFragment();let nav='',index=0;
+ revealObserver?.disconnect();
+ for(const [ci,ch] of chapters.entries()){
+  const group=items.filter(m=>chapterFor(m).id===ch.id);if(!group.length)continue;
+  nav+=`<button type="button" data-section="chapter-${ch.id}"><span>${esc(ch.title)}</span><span>${group.length}</span></button>`;
+  const section=document.createElement('section');section.className='chapter';section.id='chapter-'+ch.id;
+  section.innerHTML=`<div class="chapter-heading"><span class="chapter-num">${String(ci+1).padStart(2,'0')}</span><h3>${esc(ch.title)}</h3><div class="chapter-line"></div><span class="chapter-count">${esc(ch.subtitle)}</span></div><div class="cards"></div>`;
+  const grid=section.querySelector('.cards');for(const m of group)grid.append(getCard(m,++index));fragment.append(section);
+ }
+ if(!items.length){const empty=document.createElement('div');empty.className='empty';empty.innerHTML='<b>Ничего не найдено</b>Измени фильтры или запрос поиска.';fragment.append(empty)}
+ $('movie-list').replaceChildren(fragment);$('aside-nav').innerHTML=nav;
+ for(const el of $('movie-list').querySelectorAll('.movie-card'))watchCard(el);
+ if(focusedMovie){const focus=cardCache.get(focusedMovie)?.querySelector('.tick');if(focus?.isConnected)focus.focus({preventScroll:true});else $('unwatched-toggle').focus({preventScroll:true})}
+ if(focusedSection)$('aside-nav').querySelector(`[data-section="${focusedSection}"]`)?.focus({preventScroll:true});
+ listAnimation?.cancel();if(animate&&!motionPreference.matches)listAnimation=$('movie-list').animate([{opacity:.7,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.22,1,.36,1)'});
+ updateProgress();trackChapters();
+}
+let chapterObserver;
+function trackChapters(){
+ chapterObserver?.disconnect();if(typeof IntersectionObserver!=='function')return;
+ chapterObserver=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);if(!visible.length)return;
+  const id=visible[0].target.id;for(const b of $('aside-nav').querySelectorAll('button')){const current=b.dataset.section===id;b.classList.toggle('is-current',current);if(current)b.setAttribute('aria-current','location');else b.removeAttribute('aria-current')}
+ },{rootMargin:'-100px 0px -55% 0px',threshold:0});
+ for(const ch of $('movie-list').querySelectorAll('.chapter'))chapterObserver.observe(ch);
+}
+function setWatched(id,done){
+ const m=MOVIES.find(m=>m.id===id);if(!m)return;
+ if(done)state.watched.add(id);else state.watched.delete(id);save();
+ if(state.unwatched){render();return}
+ const el=cardCache.get(id);if(el){syncCard(el,m,Number(el.querySelector('.cover-number').textContent));el.classList.remove('was-updated');if(!motionPreference.matches){void el.offsetWidth;el.classList.add('was-updated');setTimeout(()=>el.classList.remove('was-updated'),450)}}
  updateProgress();
+}
+function scrollToItem(el,block='start'){
+ if(!el)return;el.scrollIntoView({behavior:motionPreference.matches?'instant':'smooth',block});
 }
 function setOrder(order){state.order=order;const u=new URL(location.href);if(order==='release')u.searchParams.set('order','release');else u.searchParams.delete('order');history.replaceState(null,'',u.toString());render()}
 $('btn-chron').addEventListener('click',()=>setOrder('chron'));
@@ -93,10 +222,19 @@ $('btn-release').addEventListener('click',()=>setOrder('release'));
 $('series-toggle').addEventListener('change',e=>{state.series=e.target.checked;const u=new URL(location.href);if(state.series)u.searchParams.set('series','1');else u.searchParams.delete('series');history.replaceState(null,'',u.toString());render()});
 $('unwatched-toggle').addEventListener('change',e=>{state.unwatched=e.target.checked;render()});
 $('query').addEventListener('input',e=>{state.query=e.target.value.trim().toLocaleLowerCase('ru');render()});
-$('movie-list').addEventListener('click',e=>{const b=e.target.closest('[data-check]');if(!b)return;const id=b.dataset.check;if(state.watched.has(id))state.watched.delete(id);else state.watched.add(id);save();render()});
-$('aside-nav').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(b)document.getElementById(b.dataset.section)?.scrollIntoView({behavior:'smooth',block:'start'})});
-$('continue').addEventListener('click',()=>{const next=films.slice().sort(sortItems).find(m=>!state.watched.has(m.id));if(!next)return;if(state.unwatched||state.query){state.unwatched=false;state.query='';$('query').value='';render()}document.getElementById('item-'+next.id)?.scrollIntoView({behavior:'smooth',block:'center'})});
+$('movie-list').addEventListener('click',e=>{const b=e.target.closest('[data-check]');if(b)setWatched(b.dataset.check,!state.watched.has(b.dataset.check))});
+$('aside-nav').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(b)scrollToItem(document.getElementById(b.dataset.section))});
+$('continue').addEventListener('click',()=>{const next=films.slice().sort(sortItems).find(m=>!state.watched.has(m.id));if(!next)return;if(state.unwatched||state.query){state.unwatched=false;state.query='';$('query').value='';render()}const el=document.getElementById('item-'+next.id);scrollToItem(el,'center');if(el){el.classList.add('is-next');setTimeout(()=>el.classList.remove('is-next'),1600)}});
 $('share').addEventListener('click',async()=>{const url=location.href;try{if(navigator.share){await navigator.share({title:'Хронология фильмов Marvel · MCU',text:'Интерактивный список для просмотра фильмов Marvel',url});return}if(navigator.clipboard){await navigator.clipboard.writeText(url);notify('Ссылка скопирована');return}throw Error('Clipboard unavailable')}catch(e){if(e.name==='AbortError')return;try{const el=document.createElement('textarea');el.value=url;el.style.position='fixed';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();notify(ok?'Ссылка скопирована':'Скопируй адрес из строки браузера')}catch(_){notify('Скопируй адрес из строки браузера')}}});
-render();
+render({animate:false});
+
+motionPreference.addEventListener('change',()=>{if(motionPreference.matches){listAnimation?.cancel();cancelAnimationFrame(percentFrame);for(const a of document.getAnimations())a.cancel();updateProgress()}});
+
+if(document.modelContext?.registerTool){
+ const lifecycle=new AbortController();
+ const tool={name:'set_watched_movies',description:'Set watched status for movies in this browser and update viewing progress.',inputSchema:{type:'object',properties:{ids:{type:'array',items:{type:'string'},minItems:1,maxItems:45,uniqueItems:true},watched:{type:'boolean'}},required:['ids','watched'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute(input){if(!input||typeof input.watched!=='boolean'||!Array.isArray(input.ids)||!input.ids.length||input.ids.length>45||input.ids.some(id=>typeof id!=='string'||!MOVIES.some(m=>m.id===id)))throw new Error('Provide known movie IDs and a boolean watched status');for(const id of input.ids){if(input.watched)state.watched.add(id);else state.watched.delete(id)}save();render();return {updated:input.ids,watched:input.watched,watchedFilms:films.filter(m=>state.watched.has(m.id)).length,totalFilms:films.length}}};
+ try{Promise.resolve(document.modelContext.registerTool(tool,{signal:lifecycle.signal})).catch(()=>{});window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true})}catch(_){}
+}
+
 </script>
 </body></html>
