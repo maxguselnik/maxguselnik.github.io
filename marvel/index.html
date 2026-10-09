@@ -90,6 +90,24 @@ button:focus-visible,a:focus-visible{outline:2px solid #ff5b60;outline-offset:4p
 @media(hover:none){.movie-card:hover{transform:none}.movie-card:hover .poster-image{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+/* Watched state on the poster, touch fixes, Cyrillic-safe numerals */
+.ring-value,.progress-nums,.aside-nav span:last-child,.counter-pill,.chapter-num,.chapter-count,.movie-num,.cover-number,.hero-tags b{font-family:'Space Grotesk','Manrope',sans-serif}
+.topbar{-webkit-backdrop-filter:blur(20px)}.toast{border:1px solid var(--red)}
+@media(min-width:1181px){.cards{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+.cover{cursor:pointer;-webkit-tap-highlight-color:transparent}.cover-studio{display:none}
+.cover:after{content:"";display:block;position:absolute;inset:0;width:auto;height:auto;transform:none;filter:none;background:linear-gradient(0deg,#090909f0 0%,#0909098c 45%,#09090966 100%);opacity:0;transition:opacity .35s ease;z-index:1;pointer-events:none}
+.watched-badge{position:absolute;left:50%;top:50%;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;transform:translate(-50%,-50%) scale(.6);opacity:0;color:#fff;font:700 15px/1 'Oswald','Arial Narrow',sans-serif;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 10px #000c;white-space:nowrap;pointer-events:none;transition:opacity .25s ease,transform .4s var(--ease-out)}
+.watched-badge i{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--red);box-shadow:0 0 0 6px #ed1d2440,0 10px 28px #0009}.watched-badge svg{width:32px;height:32px}
+.movie-card.watched{opacity:1;border-color:#ed1d2466}.movie-card.watched .poster-image{filter:grayscale(.85) brightness(.75)}.movie-card.watched .cover:after{opacity:1}.movie-card.watched .watched-badge{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.movie-card.watched .movie-title{text-decoration:none;color:#bdbdbd}.movie-card.watched .movie-desc{color:#8a8a8a}.movie-card.watched .cover-number{background:var(--red);border-left-color:#fff}
+.movie-card.watched .tick{background:#ed1d2426;border-color:#ed1d2499;color:#fff}
+.movie-card.was-updated.watched .watched-badge i{animation:stamp-in .5s var(--ease-out)}
+@keyframes stamp-in{0%{transform:scale(.4)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+.movie-card.is-leaving{pointer-events:none}
+@media(hover:hover) and (pointer:fine){.movie-card.watched:hover .poster-image{filter:grayscale(.5) brightness(.85)}}
+@media(hover:none){.movie-card:hover{border-color:#303030;box-shadow:0 8px 26px #0002;background:#161616}.movie-card.watched:hover{border-color:#ed1d2466}.tick:hover{border-color:#444;background:#202020;color:#ccc}.movie-card.watched .tick:hover{background:#ed1d2426;border-color:#ed1d2499;color:#fff}.btn:hover{background:#1a1a1a;border-color:var(--border)}.btn-red:hover{background:var(--red);border-color:var(--red)}}
+@media(max-width:740px){.watched-badge{font-size:12px;gap:8px}.watched-badge i{width:48px;height:48px;box-shadow:0 0 0 5px #ed1d2440,0 8px 20px #0009}.watched-badge svg{width:25px;height:25px}}
+@media(prefers-reduced-motion:reduce){.watched-badge{transform:translate(-50%,-50%)}}
 </style>
 </head>
 <body>
@@ -137,7 +155,7 @@ function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 function sortItems(a,b){if(state.order==='release')return a.date.localeCompare(b.date)||a.title.localeCompare(b.title);return a.chron-b.chron}
 function chapterFor(m){if(state.order==='release')return PHASES.find(p=>m.release>=p.min&&m.release<=p.max&&(!p.except||!p.except.includes(m.id))&&(!p.only||p.only.includes(m.id)))||PHASES[5];return CHAPTERS.find(p=>m.chron>=p.min&&m.chron<=p.max)||CHAPTERS[CHAPTERS.length-1]}
 function filtered(){return MOVIES.filter(m=>(!m.series||state.series)&&(!state.unwatched||!state.watched.has(m.id))&&(!state.query|| (m.title+' '+m.description+' '+m.event).toLocaleLowerCase('ru').includes(state.query))).sort(sortItems)}
-function card(m,num){const done=state.watched.has(m.id),isAlt=m.alt&&state.order==='chron';return `<article class="movie-card ${done?'watched':''}" data-genre="${m.genre}" id="item-${m.id}"><div class="cover"><img class="poster-image" src="assets/${m.id}.jpg" alt="Постер: ${esc(m.title)}" width="342" height="513" loading="lazy" decoding="async" /><span class="cover-number" aria-hidden="true">${String(num).padStart(2,'0')}</span><span class="cover-studio" aria-hidden="true">MARVEL</span></div><div class="movie-info"><div class="movie-meta-top"><span class="movie-num">${String(num).padStart(2,'0')} <i class="dot"></i> ${m.series?'СЕРИАЛ':'ФИЛЬМ'}</span>${m.series?'<span class="series-tag">Для контекста</span>':''}${isAlt?'<span class="alt-tag">Другая вселенная</span>':''}</div><h4 class="movie-title">${esc(m.title)}</h4><p class="movie-desc">${esc(m.description)}</p><div class="movie-details"><span>События: <b>${esc(m.event)}</b></span><span>Выход: <b>${m.release}</b></span></div></div><button class="tick" type="button" data-check="${m.id}" aria-label="${done?'Убрать отметку':'Отметить просмотренным'}: ${esc(m.title)}" aria-pressed="${done}">${done?ICON_CHECK:ICON_PLUS}<span>${done?'Просмотрено':'Отметить просмотр'}</span></button></article>`}
+function card(m,num){const done=state.watched.has(m.id),isAlt=m.alt&&state.order==='chron';return `<article class="movie-card ${done?'watched':''}" data-genre="${m.genre}" id="item-${m.id}"><div class="cover" data-check="${m.id}"><img class="poster-image" src="assets/${m.id}.jpg" alt="Постер: ${esc(m.title)}" width="342" height="513" loading="lazy" decoding="async" /><span class="cover-number" aria-hidden="true">${String(num).padStart(2,'0')}</span><span class="watched-badge" aria-hidden="true"><i>${ICON_CHECK}</i>Просмотрено</span></div><div class="movie-info"><div class="movie-meta-top"><span class="movie-num">${String(num).padStart(2,'0')} <i class="dot"></i> ${m.series?'СЕРИАЛ':'ФИЛЬМ'}</span>${m.series?'<span class="series-tag">Для контекста</span>':''}${isAlt?'<span class="alt-tag">Другая вселенная</span>':''}</div><h4 class="movie-title">${esc(m.title)}</h4><p class="movie-desc">${esc(m.description)}</p><div class="movie-details"><span>События: <b>${esc(m.event)}</b></span><span>Выход: <b>${m.release}</b></span></div></div><button class="tick" type="button" data-check="${m.id}" aria-label="${done?'Убрать отметку':'Отметить просмотренным'}: ${esc(m.title)}" aria-pressed="${done}">${done?ICON_CHECK:ICON_PLUS}<span>${done?'Просмотрено':'Отметить просмотр'}</span></button></article>`}
 function updateProgress(){const n=films.filter(f=>state.watched.has(f.id)).length;const pct=Math.round(n/films.length*100);$('progress-ring').style.setProperty('--deg',pct*3.6+'deg');animatePercent(pct);$('progress-text').textContent=n+' / '+films.length;const next=films.slice().sort(sortItems).find(f=>!state.watched.has(f.id));$('continue-title').textContent=next?'Продолжить':'Всё просмотрено';$('continue').disabled=!next;}
 const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
 const cardCache=new Map();
@@ -154,7 +172,7 @@ function animatePercent(target){
 function animateArrival(el,delay=0){
  if(motionPreference.matches||revealedCards.has(el))return;
  revealedCards.add(el);
- el.animate([{opacity:0,transform:'translateY(20px)'},{opacity:el.classList.contains('watched')?.76:1,transform:'translateY(0)'}],{duration:520,delay,easing:'cubic-bezier(.22,1,.36,1)'});
+ el.animate([{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:520,delay,easing:'cubic-bezier(.22,1,.36,1)'});
 }
 const revealObserver=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{
  let delay=0;for(const entry of entries){if(entry.isIntersecting){animateArrival(entry.target,Math.min(delay,160));delay+=45;revealObserver.unobserve(entry.target)}}
@@ -209,7 +227,7 @@ function trackChapters(){
 function setWatched(id,done){
  const m=MOVIES.find(m=>m.id===id);if(!m)return;
  if(done)state.watched.add(id);else state.watched.delete(id);save();
- if(state.unwatched){render();return}
+ if(state.unwatched){const leaving=done&&cardCache.get(id);if(leaving&&!motionPreference.matches&&leaving.animate){leaving.classList.add('is-leaving');leaving.animate([{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(.94)'}],{duration:260,easing:'ease-in',fill:'forwards'}).finished.then(()=>{leaving.classList.remove('is-leaving');leaving.getAnimations().forEach(a=>a.cancel());render({animate:false})},()=>render({animate:false}))}else render();return}
  const el=cardCache.get(id);if(el){syncCard(el,m,Number(el.querySelector('.cover-number').textContent));el.classList.remove('was-updated');if(!motionPreference.matches){void el.offsetWidth;el.classList.add('was-updated');setTimeout(()=>el.classList.remove('was-updated'),450)}}
  updateProgress();
 }
