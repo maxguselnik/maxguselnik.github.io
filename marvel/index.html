@@ -115,10 +115,8 @@ button:focus-visible,a:focus-visible{outline:2px solid #ff5b60;outline-offset:4p
 .sync-sheet h3{font:600 26px/1.1 'Oswald',sans-serif;text-transform:uppercase;margin:0 40px 10px 0}.sync-lead{color:#b5b5b5;font-size:14px;line-height:1.6;margin:0 0 20px}
 .sync-close-form{position:absolute;top:12px;right:12px;margin:0}.sync-x{width:40px;height:40px;border:0;border-radius:50%;background:#242424;color:#ddd;font-size:24px;line-height:1}
 .sync-label{display:block;color:#aaa;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-.sync-code{font:700 34px/1 'Space Grotesk','Manrope',monospace;letter-spacing:.12em;padding:16px;text-align:center;background:#0c0c0c;border:1px dashed #555;border-radius:4px;margin-bottom:12px;user-select:all}
+.sync-link{font:600 14px/1.5 'Space Grotesk','Manrope',monospace;word-break:break-all;padding:14px;background:#0c0c0c;border:1px dashed #555;border-radius:4px;margin-bottom:12px;user-select:all;color:#eee}.sync-note{color:#888;font-size:12px;line-height:1.6;margin:14px 0 0}.sync-code{font:700 34px/1 'Space Grotesk','Manrope',monospace;letter-spacing:.12em;padding:16px;text-align:center;background:#0c0c0c;border:1px dashed #555;border-radius:4px;margin-bottom:12px;user-select:all}
 .sync-wide{width:100%;min-height:48px;white-space:normal}.sync-status{color:#aaa;font-size:13px;margin:12px 0 0;min-height:1.4em}.sync-status.ok{color:#5fd88a}.sync-status.err{color:#f5b04a}
-.sync-join{margin-top:22px;padding-top:18px;border-top:1px solid #303030}.sync-row{display:flex;gap:8px}.sync-row input{flex:1;min-width:0;background:#0c0c0c;color:#fff;border:1px solid #333;border-radius:3px;padding:12px;font:700 18px 'Space Grotesk','Manrope',monospace;letter-spacing:.1em;text-transform:uppercase;outline:0}.sync-row input:focus{border-color:var(--red)}.sync-row .btn{min-height:48px}
-.sync-unlink{display:block;margin:18px auto 0;border:0;background:none;color:#999;font-size:13px;text-decoration:underline;padding:8px}
 @media(max-width:740px){.sync-sheet{margin:auto auto 0;width:100%;max-width:100%;border-radius:14px 14px 0 0;padding:24px 16px calc(20px + env(safe-area-inset-bottom))}.sync-code{font-size:30px}}
 @media(prefers-reduced-motion:no-preference){.sync-sheet[open]{animation:sheet-in .35s var(--ease-out)}}
 @keyframes sheet-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -127,13 +125,13 @@ button:focus-visible,a:focus-visible{outline:2px solid #ff5b60;outline-offset:4p
 <body>
 <header class="topbar"><div class="wrap nav">
   <a href="#top" class="brand" aria-label="К началу"><span class="marvel">MARVEL</span><span class="brand-sub">КИНОВСЕЛЕННАЯ<br>ГИД ПО ПРОСМОТРУ</span></a>
-  <div class="nav-right"><span class="nav-quiet" id="sync-quiet">Сохраняется на устройстве</span><button class="btn sync-btn" id="sync-open" type="button" aria-label="Синхронизация между устройствами" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="m9.5 13 2 2 3.5-3.5"/></svg><span class="btn-label">Синхронизация</span><i class="sync-dot" aria-hidden="true"></i></button><button class="btn" id="share" type="button" aria-label="Поделиться сайтом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V3m0 0 4.5 4.5M12 3 7.5 7.5"/><path d="M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/></svg><span class="btn-label">Поделиться</span></button></div>
+  <div class="nav-right"><span class="nav-quiet" id="sync-quiet">Сохраняется на устройстве</span><button class="btn sync-btn" id="sync-open" type="button" aria-label="Моя ссылка для других устройств" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7Z"/><path d="m9.5 13 2 2 3.5-3.5"/></svg><span class="btn-label">Моя ссылка</span><i class="sync-dot" aria-hidden="true"></i></button><button class="btn" id="share" type="button" aria-label="Поделиться сайтом"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V3m0 0 4.5 4.5M12 3 7.5 7.5"/><path d="M5 13v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/></svg><span class="btn-label">Поделиться</span></button></div>
 </div></header>
 <main id="top" class="wrap">
   <section class="hero" aria-labelledby="hero-title"><div class="hero-inner"><div class="eyebrow">ТВОЙ ПУТЬ ПО MCU</div><h1 id="hero-title">ВСЕЛЕННАЯ MARVEL.<span>ТВОЯ ХРОНОЛОГИЯ.</span></h1><p>От «Первого мстителя» до мультивселенной. Выбери порядок просмотра и собери свою историю MCU.</p><div class="hero-tags"><span><b>38</b> фильмов</span><span><b>6</b> фаз</span><span><b>2</b> порядка просмотра</span></div></div><span class="credit">НЕОФИЦИАЛЬНЫЙ ГИД ФАНАТА</span></section>
   <div class="layout">
   <aside class="aside" aria-label="Прогресс и навигация">
-   <section class="panel"><div class="panel-title">ТВОЙ ПРОГРЕСС</div><div class="ring-wrap"><div class="progress-ring" id="progress-ring"><span class="ring-value" id="ring-percent">0%</span></div><div><div class="progress-nums" id="progress-text">0 / 38</div><div class="progress-copy">фильмов просмотрено</div></div></div><div class="rule"></div><button id="continue" class="btn btn-red continue" type="button">▶ <span id="continue-title">Продолжить</span></button><p class="aside-hint" id="aside-hint">Отметки сохраняются в этом браузере. Чтобы видеть их на других устройствах, включи «Синхронизацию» вверху.</p></section>
+   <section class="panel"><div class="panel-title">ТВОЙ ПРОГРЕСС</div><div class="ring-wrap"><div class="progress-ring" id="progress-ring"><span class="ring-value" id="ring-percent">0%</span></div><div><div class="progress-nums" id="progress-text">0 / 38</div><div class="progress-copy">фильмов просмотрено</div></div></div><div class="rule"></div><button id="continue" class="btn btn-red continue" type="button">▶ <span id="continue-title">Продолжить</span></button><p class="aside-hint" id="aside-hint">Отметки сохраняются в облаке. Чтобы видеть их на другом устройстве, открой там свою ссылку (кнопка с облаком вверху).</p></section>
    <section class="panel"><div class="panel-title" id="aside-chapter-title">ГЛАВЫ ИСТОРИИ</div><nav id="aside-nav" class="aside-nav" aria-label="Главы"></nav></section>
   </aside>
   <section class="content" id="watchlist" aria-labelledby="list-title">
@@ -146,12 +144,12 @@ button:focus-visible,a:focus-visible{outline:2px solid #ff5b60;outline-offset:4p
   <footer class="footer"><div>MCU WATCH GUIDE · Обновлено: октябрь 2026<br><small>Неофициальный справочник. Marvel и названия произведений принадлежат правообладателям.</small></div><div>Основа порядка: <a href="https://editorial.rottentomatoes.com/guide/marvel-movies-in-order/" target="_blank" rel="noopener noreferrer">Rotten Tomatoes ↗</a> · <a href="https://www.marvel.com/articles/culture-lifestyle/mcu-the-marvel-cinematic-universe-an-official-timeline-available-now" target="_blank" rel="noopener noreferrer">Marvel ↗</a><br>Прогресс хранится локально в браузере.</div></footer>
 </main>
 <dialog class="sync-sheet" id="sync-dialog" aria-labelledby="sync-title"><form method="dialog" class="sync-close-form"><button class="sync-x" aria-label="Закрыть">×</button></form>
-  <h3 id="sync-title">Синхронизация</h3>
-  <p class="sync-lead">Отметки хранятся в облаке по коду. Открой ссылку или введи код на другом устройстве — прогресс объединится, ничего не пропадёт.</p>
-  <div id="sync-on" hidden><div class="sync-label">Твой код</div><div class="sync-code" id="sync-code"></div><button type="button" class="btn btn-red sync-wide" id="sync-copy">Скопировать ссылку для другого устройства</button><p class="sync-status" id="sync-status" role="status"></p></div>
-  <div id="sync-off"><button type="button" class="btn btn-red sync-wide" id="sync-create">Включить и получить код</button></div>
-  <form class="sync-join" id="sync-join"><label for="sync-input" class="sync-label">Уже есть код с другого устройства?</label><div class="sync-row"><input id="sync-input" placeholder="XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="9" /><button class="btn" type="submit">Подключить</button></div></form>
-  <button type="button" class="sync-unlink" id="sync-unlink" hidden>Отключить синхронизацию на этом устройстве</button>
+  <h3 id="sync-title">Твоя ссылка</h3>
+  <p class="sync-lead">Прогресс хранится в облаке и привязан к этой ссылке. Открой её на телефоне, компьютере или планшете — отметки будут одни и те же. Сохрани в закладки.</p>
+  <div class="sync-link" id="sync-link"></div>
+  <button type="button" class="btn btn-red sync-wide" id="sync-copy">Скопировать мою ссылку</button>
+  <p class="sync-status" id="sync-status" role="status"></p>
+  <p class="sync-note">Не отправляй эту ссылку другим: по ней можно менять твои отметки. Для друзей есть кнопка «Поделиться» — у них будет свой прогресс.</p>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite">Ссылка скопирована</div>
 <script>
@@ -266,19 +264,16 @@ $('query').addEventListener('input',e=>{state.query=e.target.value.trim().toLoca
 $('movie-list').addEventListener('click',e=>{const b=e.target.closest('[data-check]');if(b)setWatched(b.dataset.check,!state.watched.has(b.dataset.check))});
 $('aside-nav').addEventListener('click',e=>{const b=e.target.closest('[data-section]');if(b)scrollToItem(document.getElementById(b.dataset.section))});
 $('continue').addEventListener('click',()=>{const next=films.slice().sort(sortItems).find(m=>!state.watched.has(m.id));if(!next)return;if(state.unwatched||state.query){state.unwatched=false;state.query='';$('query').value='';render()}const el=document.getElementById('item-'+next.id);scrollToItem(el,'center');if(el){el.classList.add('is-next');setTimeout(()=>el.classList.remove('is-next'),1600)}});
-$('share').addEventListener('click',async()=>{const url=location.href;try{if(navigator.share){await navigator.share({title:'Хронология фильмов Marvel · MCU',text:'Интерактивный список для просмотра фильмов Marvel',url});return}if(navigator.clipboard){await navigator.clipboard.writeText(url);notify('Ссылка скопирована');return}throw Error('Clipboard unavailable')}catch(e){if(e.name==='AbortError')return;try{const el=document.createElement('textarea');el.value=url;el.style.position='fixed';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();notify(ok?'Ссылка скопирована':'Скопируй адрес из строки браузера')}catch(_){notify('Скопируй адрес из строки браузера')}}});
+$('share').addEventListener('click',async()=>{const shareUrl=new URL(location.href);shareUrl.searchParams.delete('p');const url=shareUrl.toString();try{if(navigator.share){await navigator.share({title:'Хронология фильмов Marvel · MCU',text:'Интерактивный список для просмотра фильмов Marvel',url});return}if(navigator.clipboard){await navigator.clipboard.writeText(url);notify('Ссылка скопирована');return}throw Error('Clipboard unavailable')}catch(e){if(e.name==='AbortError')return;try{const el=document.createElement('textarea');el.value=url;el.style.position='fixed';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();notify(ok?'Ссылка скопирована':'Скопируй адрес из строки браузера')}catch(_){notify('Скопируй адрес из строки браузера')}}});
 render({animate:false});
 
-/* Синхронизация через marvel-sync worker: код — ключ, слияние по времени отметки каждого фильма */
+/* Синхронизация через marvel-sync worker: личный код в ссылке (?p=), слияние по времени отметки каждого фильма */
 const SYNC_API=(()=>{try{return localStorage.getItem('mcu_sync_api')}catch(e){return null}})()||'https://marvel-sync.maxgyselnik.workers.dev';
 const SYNC_ALPHABET='23456789ABCDEFGHJKMNPQRSTVWXYZ';
 let syncCode=null,syncTimer=0,syncBusy=false,syncAgain=false,syncDirty=false,syncLast=0,syncError=false;
-try{syncCode=localStorage.getItem('mcu_sync_code')}catch(e){}
 function normCode(v){const c=String(v||'').toUpperCase().replace(/[^0-9A-Z]/g,'');return c.length===8&&[...c].every(ch=>SYNC_ALPHABET.includes(ch))?c:null}
-function prettyCode(c){return c.slice(0,4)+'-'+c.slice(4)}
 function newCode(){const a=new Uint32Array(8);crypto.getRandomValues(a);return [...a].map(n=>SYNC_ALPHABET[n%SYNC_ALPHABET.length]).join('')}
-function syncLink(){return location.origin+location.pathname+'?sync='+syncCode}
-function setSyncCode(c){syncCode=c;try{if(c)localStorage.setItem('mcu_sync_code',c);else localStorage.removeItem('mcu_sync_code')}catch(e){}updateSyncUI()}
+function syncLink(){return location.origin+location.pathname+'?p='+syncCode}
 function applyRemote(items){
  if(!items||typeof items!=='object')return;let changed=false;
  for(const [id,v] of Object.entries(items)){if(!MOVIES.some(m=>m.id===id)||!v)continue;const cur=syncMeta[id];if(!cur||v.t>cur.t){const w=v.w?1:0;if(!cur||cur.w!==w)changed=true;syncMeta[id]={w,t:v.t}}}
@@ -289,7 +284,7 @@ function applyRemote(items){
 }
 async function syncNow(){
  if(!syncCode)return;if(syncBusy){syncAgain=true;return}
- syncBusy=true;syncDirty=false;updateSyncUI('Синхронизация…');
+ syncBusy=true;syncDirty=false;
  try{
   const r=await fetch(SYNC_API+'/p/'+syncCode,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({items:syncMeta}),cache:'no-store'});
   if(!r.ok)throw Error('HTTP '+r.status);
@@ -299,24 +294,27 @@ async function syncNow(){
  if(syncAgain){syncAgain=false;syncNow()}
 }
 function scheduleSync(){if(!syncCode)return;syncDirty=true;clearTimeout(syncTimer);syncTimer=setTimeout(syncNow,700)}
-function updateSyncUI(msg){
- const on=!!syncCode;$('sync-open').classList.toggle('is-on',on&&!syncError);$('sync-open').classList.toggle('is-error',on&&syncError);
- $('sync-quiet').textContent=on?(syncError?'Нет связи · сохранено на устройстве':'Синхронизируется'):'Сохраняется на устройстве';
- $('sync-on').hidden=!on;$('sync-off').hidden=on;$('sync-unlink').hidden=!on;
- if(!on)return;$('sync-code').textContent=prettyCode(syncCode);
- const st=$('sync-status');st.className='sync-status'+(msg?'':syncError?' err':syncLast?' ok':'');
- st.textContent=msg||(syncError?'Нет связи с сервером. Отметки сохранены на устройстве и отправятся позже.':syncLast?'✓ Синхронизировано в '+new Date(syncLast).toLocaleTimeString('ru',{hour:'2-digit',minute:'2-digit'}):'');
+function updateSyncUI(){
+ $('sync-open').classList.toggle('is-on',!!syncLast&&!syncError);$('sync-open').classList.toggle('is-error',syncError);
+ $('sync-quiet').textContent=syncError?'Нет связи · сохранено на устройстве':'Сохраняется в облаке';
+ $('sync-link').textContent=syncLink();
+ const st=$('sync-status');st.className='sync-status'+(syncError?' err':syncLast?' ok':'');
+ st.textContent=syncError?'Нет связи с сервером. Отметки сохранены на устройстве и отправятся позже.':syncLast?'✓ Синхронизировано в '+new Date(syncLast).toLocaleTimeString('ru',{hour:'2-digit',minute:'2-digit'}):'Подключение…';
 }
 async function copyText(text){try{if(navigator.clipboard){await navigator.clipboard.writeText(text);return true}}catch(e){}try{const el=document.createElement('textarea');el.value=text;el.style.position='fixed';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();return ok}catch(e){return false}}
 $('sync-open').addEventListener('click',()=>{const d=$('sync-dialog');updateSyncUI();if(d.showModal)d.showModal();else d.setAttribute('open','')});
 $('sync-dialog').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close()});
-$('sync-create').addEventListener('click',()=>{setSyncCode(newCode());syncNow()});
-$('sync-copy').addEventListener('click',async()=>{const url=syncLink();try{if(navigator.share&&matchMedia('(hover:none)').matches){await navigator.share({title:'Мой прогресс MCU',url});return}}catch(e){if(e.name==='AbortError')return}notify(await copyText(url)?'Ссылка скопирована — открой её на другом устройстве':'Код: '+prettyCode(syncCode))});
-$('sync-join').addEventListener('submit',e=>{e.preventDefault();const c=normCode($('sync-input').value);if(!c){notify('Код — 8 символов, например ABCD-EFGH');$('sync-input').focus();return}$('sync-input').value='';setSyncCode(c);syncNow();notify('Устройство подключено')});
-$('sync-unlink').addEventListener('click',()=>{setSyncCode(null);syncError=false;notify('Синхронизация отключена, отметки остались на устройстве')});
+$('sync-copy').addEventListener('click',async()=>{notify(await copyText(syncLink())?'Ссылка скопирована — открой её на другом устройстве':'Скопируй ссылку из окна вручную')});
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')syncNow();else if(syncDirty&&syncCode){try{fetch(SYNC_API+'/p/'+syncCode,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({items:syncMeta}),keepalive:true})}catch(e){}}});
-(()=>{const u=new URL(location.href),c=normCode(u.searchParams.get('sync'));if(u.searchParams.has('sync')){u.searchParams.delete('sync');history.replaceState(null,'',u.toString())}if(c&&c!==syncCode){setSyncCode(c);notify('Синхронизация подключена')}updateSyncUI();syncNow()})();
-
+(()=>{
+ const u=new URL(location.href),fromUrl=normCode(u.searchParams.get('p'))||normCode(u.searchParams.get('sync'));
+ let stored=null;try{stored=normCode(localStorage.getItem('mcu_sync_code'))}catch(e){}
+ syncCode=fromUrl||stored||newCode();
+ try{localStorage.setItem('mcu_sync_code',syncCode)}catch(e){}
+ if(fromUrl&&stored&&fromUrl!==stored)notify('Подключён прогресс по ссылке');
+ u.searchParams.delete('sync');u.searchParams.set('p',syncCode);history.replaceState(null,'',u.toString());
+ updateSyncUI();syncNow();
+})();
 motionPreference.addEventListener('change',()=>{if(motionPreference.matches){listAnimation?.cancel();cancelAnimationFrame(percentFrame);for(const a of document.getAnimations())a.cancel();updateProgress()}});
 
 if(document.modelContext?.registerTool){
