@@ -1,0 +1,7 @@
+name = "marvel-sync"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+
+[[kv_namespaces]]
+binding = "PROGRESS"
+id = "cde2a942142848d6871183adcc4592c6"
